@@ -1,5 +1,7 @@
 import '@cumul.io/cumulio-dashboard';
 const dashboardId = 'DASHBOARD_ID_HERE';
+const appServer = 'APP_SERVER_HERE';
+const apiHost = 'API_HOST_HERE';
 
 const renderApp = (root: HTMLElement, auth: {
   status: string;
@@ -7,7 +9,7 @@ const renderApp = (root: HTMLElement, auth: {
   token?: string;
 }) => {
   root.innerHTML = `
-    <cumulio-dashboard dashboardId="${dashboardId}" authKey="${auth.key}" authToken="${auth.token}"></cumulio-dashboard>
+    <cumulio-dashboard appServer="${appServer}" apiHost="${apiHost}" dashboardId="${dashboardId}" authKey="${auth.key}" authToken="${auth.token}"></cumulio-dashboard>
   `;
 }
 
